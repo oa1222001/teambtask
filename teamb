@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int petya(int n){
+	return (n/100);
+}
+int vasya(int n){
+	return ((n%100)/10);
+}
+int tonya(int n){
+	return ((n%100)%10);
+}
+int main(){
+	int prob;//this how many problems
+	int sol=0;//how many solutions
+	cin>>prob;
+
+	for(int i=0; i<prob;i++){
+		int agrees;
+		cin>>agrees;
+		if(petya(agrees)==1&&vasya(agrees)==1||petya(agrees)==1&&tonya(agrees)==1||vasya(agrees)==1&&tonya(agrees)==1||petya(agrees)==1&&vasya(agrees)==1&&tonya(agrees)==1){
+			sol++;
+		}
+
+
+		
+	}
+	cout<<sol<<endl;
+
+
+	
+	return 0;
+}
